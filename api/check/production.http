@@ -1,0 +1,25 @@
+@base_url = https://yarra-api-uhnhhjtvcz.now.sh
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhdHJpY2suc21pdGhAY29kZXJhY2FkZW15LmVkdS5hdSIsImlhdCI6MTUxMzIxMTQ5OCwiZXhwIjoxNTEzODE2Mjk4LCJzdWIiOiI1YTMxYzY2NzU3ODUzYTAwYWFhNDk1N2IifQ.q7oIB5XezTXzSfFbgxiUHMoBGiWbUBJIWC8AJW8mEgg
+### List Products
+GET {{base_url}}/products
+
+### Signup
+POST {{base_url}}/auth/register
+Content-Type: application/json
+
+{
+  "email": "patrick.smith@coderacademy.edu.au",
+  "firstName": "Patrick",
+  "lastName": "Smith",
+  "password": "password123"
+}
+
+### Create Product
+POST {{base_url}}/products
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "brandName": "Big W",
+  "name": "T Shirt"
+}
